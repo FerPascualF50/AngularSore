@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+  <a [routerLink]="['/']">
+    <span>Mi Tienda Angular</span>
+
+  </a>
+    <span class="spacer"></span>
+    <app-cart class="mouseHover" (click)="goToCheckout()"></app-cart>
+  </mat-toolbar>

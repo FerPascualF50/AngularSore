@@ -1,0 +1,14 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.mouseHover:hover{
+    background-color: rgb(13, 170, 136);
+    cursor: pointer;
+    transition: all 0.7 ease-in-out;
+}
