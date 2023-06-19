@@ -73,7 +73,7 @@
       "price": 17,
       "description": "In this book, the reader will be able to focus on one concept of Angular in deep.",
       "categoryId": 1,
-      "stock": -1
+      "stock": 50
     },
     {
       "id": 4,
@@ -81,7 +81,7 @@
       "price": 19,
       "description": "Ideal for Android smartphones and tablets, and MIL cameras. SanDisk Memory Zone app for easy file management (Download and Installation Required).",
       "categoryId": 2,
-      "stock": 8
+      "stock": 50
     },
     {
       "id": 5,
@@ -89,7 +89,7 @@
       "price": 399,
       "description": "5K Video - Shoot stunning video with up to 5K resolution, perfect for maintaining detail even when zooming in",
       "categoryId": 2,
-      "stock": 7
+      "stock": 50
     },
     {
       "id": 6,
@@ -97,7 +97,7 @@
       "price": 7,
       "description": "HDMI A Male to A Male Cable: Supports Ethernet, 3D, 4K video and Audio Return Channel (ARC)",
       "categoryId": 2,
-      "stock": 6
+      "stock": 4
     },
     {
       "id": 7,
@@ -119,92 +119,11 @@
   "orders": [
     {
       "id": 1,
-      "name": "Dominicode",
+      "name": "El fratacho",
       "date": "01/12/1995",
       "shippingAddress": "Av. de la Granvia de Hospitalet, 115",
       "city": "Barcelona",
       "pickup": true
-    },
-    {
-      "name": "gffgxcbx",
-      "store": {
-        "id": 1,
-        "name": "Park Row at Beekman St",
-        "address": "38 Park Row",
-        "city": "New York",
-        "openingHours": "10:00 - 14:00 and 17:00 - 20:30"
-      },
-      "date": "18/6/2023",
-      "isDelivery": false,
-      "id": 2
-    },
-    {
-      "name": "paddel",
-      "store": {
-        "id": 1,
-        "name": "Park Row at Beekman St",
-        "address": "38 Park Row",
-        "city": "New York",
-        "openingHours": "10:00 - 14:00 and 17:00 - 20:30"
-      },
-      "date": "18/6/2023",
-      "isDelivery": false,
-      "id": 3
-    },
-    {
-      "name": "Sheraton",
-      "store": {
-        "id": 2,
-        "name": "Store Alcalá",
-        "address": "Calle de Alcalá, 21",
-        "city": "Madrid",
-        "openingHours": "10:00 - 14:00 and 17:00 - 20:30"
-      },
-      "date": "18/6/2023",
-      "isDelivery": false,
-      "id": 4
-    },
-    {
-      "name": "Sheraton",
-      "shippingAddress": "Lote 27 Mzna 14 B Villa Catalina",
-      "city": "RIO CEBALLOS",
-      "date": "18/6/2023",
-      "isDelivery": true,
-      "id": 5
-    },
-    {
-      "name": "gffgxcbx",
-      "store": {
-        "id": 1,
-        "name": "Park Row at Beekman St",
-        "address": "38 Park Row",
-        "city": "New York",
-        "openingHours": "10:00 - 14:00 and 17:00 - 20:30"
-      },
-      "date": "18/6/2023",
-      "isDelivery": false,
-      "id": 6
-    },
-    {
-      "name": "Fernando Pascual",
-      "store": {
-        "id": 5,
-        "name": "Monmouth St",
-        "address": "11 Monmouth Street",
-        "city": "London",
-        "openingHours": "10:00 - 14:00 and 17:00 - 20:30"
-      },
-      "date": "18/6/2023",
-      "isDelivery": false,
-      "id": 7
-    },
-    {
-      "name": "Fernando Pascual",
-      "shippingAddress": "Lote 27 Mzna 14 B Villa Catalina",
-      "city": "RIO CEBALLOS",
-      "date": "18/6/2023",
-      "isDelivery": true,
-      "id": 8
     }
   ],
   "detailsOrders": [
@@ -212,42 +131,8 @@
       "id": 1,
       "orderId": 1,
       "quantity": 10,
-      "productName": "Product name"
-    },
-    {
-      "details": [],
-      "orderId": 2,
-      "id": 2
-    },
-    {
-      "details": [],
-      "orderId": 3,
-      "id": 3
-    },
-    {
-      "details": [],
-      "orderId": 4,
-      "id": 4
-    },
-    {
-      "details": [],
-      "orderId": 5,
-      "id": 5
-    },
-    {
-      "details": [],
-      "orderId": 6,
-      "id": 6
-    },
-    {
-      "details": [],
-      "orderId": 7,
-      "id": 7
-    },
-    {
-      "details": [],
-      "orderId": 8,
-      "id": 8
+      "productName": "El fratacho"
     }
+    
   ]
 }
