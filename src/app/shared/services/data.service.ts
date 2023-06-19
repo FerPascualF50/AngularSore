@@ -9,9 +9,8 @@ import { DetailsOrder, Order } from "../interfaces/order.interface";
 })
 
 export class DataService {
-  private apiURL='http://localhost:3000';
-
-  constructor(private http: HttpClient) {}
+  private apiURL = 'http://localhost:3000';
+  constructor(private http: HttpClient) { }
 
   getStores(): Observable<Store[]> {
     return this.http.get<Store[]>(`${this.apiURL}/stores`)

@@ -6,7 +6,7 @@ import { Product } from "src/app/pages/products/interface/product.interface";
     { providedIn: 'root'}
 )
 
-export class ShoppingCartServise {
+export class ShoppingCartService {
     products: Product[] = [];
 
     private cartSubject = new BehaviorSubject<Product[]>([]);

@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { ShoppingCartServise } from "../../services/shopping-cart.service";
+import { ShoppingCartService } from "../../services/shopping-cart.service";
 
 @Component({
     selector: 'app-cart',
@@ -19,5 +19,5 @@ export class CartComponent {
     total$ =  this.shoppingCartSvc.totalAction$;
     //cart$ = this.shoppingCartSvc.cartAction$;
 
-    constructor(private shoppingCartSvc: ShoppingCartServise) {}
+    constructor(private shoppingCartSvc: ShoppingCartService) {}
 }

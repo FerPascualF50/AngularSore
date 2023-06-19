@@ -5,7 +5,7 @@ import { Details, Order } from 'src/app/shared/interfaces/order.interface';
 import { Store } from 'src/app/shared/interfaces/stores.interface';
 import { DataService } from 'src/app/shared/services/data.service';
 import { Product } from '../products/interface/product.interface';
-import { ShoppingCartServise } from 'src/app/shared/services/shopping-cart.service';
+import { ShoppingCartService } from 'src/app/shared/services/shopping-cart.service';
 import { Router } from '@angular/router';
 import { ProductsService } from '../products/services/products.service';
 
@@ -19,19 +19,17 @@ export class CheckoutComponent implements OnInit {
     name: '',
     store: '',
     shippingAddress: '',
-    city: '',
+    city: ''
   };
-  isDelivery: boolean = false;
+  isDelivery = false;
   cart: Product[] = [];
-  stores: Store[] = [];
+  stores: Store[] = []
   constructor(
-    private dataSvc: DataService, 
-    private shoppingCartSvc: ShoppingCartServise,
+    private dataSvc: DataService,
+    private shoppingCartSvc: ShoppingCartService,
     private router: Router,
     private productsSvc: ProductsService
-    ) { 
-      // this.checkIfCartIsEmpty();
-    }
+  ) {  }
 
   ngOnInit(): void {
     this.getStores();
@@ -44,32 +42,32 @@ export class CheckoutComponent implements OnInit {
   }
 
   onSubmit({ value: formData }: NgForm): void {
-    console.log("guardar", formData);
+    console.log('Guardar', formData);
     const data: Order = {
       ...formData,
       date: this.getCurrentDay(),
       isDelivery: this.isDelivery
     }
     this.dataSvc.saveOrder(data)
-    .pipe(
-      tap(res => console.log('Order ->', res)),
-      switchMap(({ id: orderId }) => {
-        const details = this.prepareDetails();
-        return this.dataSvc.saveDetailsOrder({ details, orderId });
-      }),
-      tap(() => this.router.navigate(['/checkout/thank-you-page'])),
-      delay(2000),
-      tap(() => this.shoppingCartSvc.resetCart())
-    )
-    .subscribe();
+      .pipe(
+        tap(res => console.log('Order ->', res)),
+        switchMap(({ id: orderId }) => {
+          const details = this.prepareDetails();
+          console.log(details)
+          return this.dataSvc.saveDetailsOrder({ details, orderId });
+        }),
+        tap(() => this.router.navigate(['/checkout/thank-you-page'])),
+        delay(2000),
+        tap(() => this.shoppingCartSvc.resetCart())
+      )
+      .subscribe();
   }
 
   private getStores(): void {
     this.dataSvc.getStores()
       .pipe(
-        tap((stores: Store[]) => this.stores = stores)
-      )
-      .subscribe();
+        tap((stores: Store[]) => this.stores = stores))
+      .subscribe()
   }
 
   private getCurrentDay(): string {
@@ -100,17 +98,4 @@ export class CheckoutComponent implements OnInit {
       )
       .subscribe()
   }
-
-  // private checkIfCartIsEmpty(): void {
-  //   this.shoppingCartSvc.cartAction$
-  //   .pipe(
-  //     tap((products: Product[])=> {
-  //       if(Array.isArray(products) && !products.length){
-  //         this.router.navigate(['/products']);
-  //       }
-  //     })
-  //   )
-  //   .subscribe()
-  // }
 }
-
