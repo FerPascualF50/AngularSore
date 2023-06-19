@@ -1,13 +1,18 @@
-<mat-card class="card" >
-    <mat-card-title>
-        <mat-card-header>{{product.name}}</mat-card-header>
-    </mat-card-title>
-    <mat-card-content>{{product.description}}</mat-card-content>
-    <mat-card-actions>
-        <button mat-flat-button color="primary" (click)="onClick()">
-            Comprar {{product.price | currency}}
-            <mat-icon>add_shopping_cart</mat-icon>
-        </button>
-        
-    </mat-card-actions>
+<mat-card class="card">
+	<mat-card-title>
+		<mat-card-header>{{product.name}}</mat-card-header>
+	</mat-card-title>
+	<mat-card-content>{{product.description}}</mat-card-content>
+	<mat-card-actions>
+		<button
+			mat-flat-button
+			color="primary"
+			(click)="onClick()"
+			[disabled]="product.stock <= 0"
+			>
+			Comprar {{product.price | currency}}
+			<mat-icon>add_shopping_cart</mat-icon>
+		</button>
+
+	</mat-card-actions>
 </mat-card>

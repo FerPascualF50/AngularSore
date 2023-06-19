@@ -19,14 +19,14 @@
 				value="pickup"
 				(change)="onPickupOrDelivery(false)"
 				checked
-        >Pickup</mat-radio-button
+        >Retiro en Tienda</mat-radio-button
       >
       <mat-radio-button
         value="delivery"
         (change)="onPickupOrDelivery(true)"
         
       >
-        Delivery
+        Entrega en tu Domicilio
       </mat-radio-button>
 		</mat-radio-group>
 		<ng-container *ngIf="isDelivery; else showStores">
@@ -69,7 +69,7 @@
 		mat-raised-button 
 		color="primary" 
 		type="submit"
-		(click)="onSubmit"
+		(click)="onSubmit(checkoutForm)"
 		>
 		Finalizar Compra
 	</button>
